@@ -9,7 +9,7 @@ public class FilterEmployeeAge {
 		List<Employee> employeeList = new ArrayList<>();
 		employeeList.add(new Employee(1, "Raj", 25, 20000));
 		employeeList.add(new Employee(2, "Ram", 20, 40000));
-		employeeList.add(new Employee(3, "Sunder", 40, 100000));
+		employeeList.add(new Employee(3, "Sunder", 45, 100000));
 		employeeList.add(new Employee(4, "Techie", 35, 75000));
 		
 		List <Employee> empList = employeeList.stream().filter(employee -> employee.getAge() > 25).collect(Collectors.toList());
