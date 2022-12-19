@@ -1,8 +1,10 @@
 package com.test;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class DistinctEmployeeList {
@@ -20,13 +22,14 @@ public class DistinctEmployeeList {
 //		
 //		System.out.println(set);
 
-//		System.out.println(employeeList.stream().distinct().collect(Collectors.toList()));
+		System.out.println(employeeList.stream().distinct().collect(Collectors.toList()));
 
 //		System.out.println(employeeList.stream().map(employee -> employee.getName()).distinct().collect(Collectors.toList()));
 
-		Map<String, List<Employee>> employeeMap = employeeList.stream().distinct().collect(Collectors.groupingBy(Employee::getDepartment));
-		Map<String, List<String>> map = employeeMap.entrySet().stream().collect(Collectors.toMap(Map.Entry::getKey, entry->entry.getValue().stream().map(employee -> employee.getName()).collect(Collectors.toList())));
-		System.out.println(map);
+//		Map<String, List<Employee>> employeeMap = employeeList.stream().distinct().collect(Collectors.groupingBy(Employee::getDepartment));
+//		Map<String, List<String>> map = employeeMap.entrySet().stream().collect(Collectors.toMap(Map.Entry::getKey, entry->entry.getValue().stream().map(employee -> employee.getName()).collect(Collectors.toList())));
+//		System.out.println(map);
+		
 //		map.entrySet().stream().forEach(entry -> {
 //			System.out.println(entry.getKey() +": "+ entry.getValue());
 //		});
